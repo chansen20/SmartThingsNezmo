@@ -1267,7 +1267,7 @@ def refresh() {
 def reset() {
     if (state.debug) log.trace "${device.displayName}: reset()"
 
-    state.lastReset = new Date().format("YYYY/MM/dd \n HH:mm:ss", location.timeZone)
+    state.lastReset = new Date().format("MM-dd-yy \n h:mm a", location.timeZone)
     sendEvent(name: "lastReset", value: state.lastReset)
 
     return [
