@@ -896,7 +896,7 @@ def installed() {
 
     state.debug = true
     state.installedAt = now()
-    state.lastReset = new Date().format("YYYY/MM/dd \n HH:mm:ss", location.timeZone)
+    state.lastReset = new Date().format("MM-dd-yy \n h:mm a", location.timeZone)
     state.channelMapping = [null, "Red", "Green", "Blue", "White"]
     state.channelThresholds = [null,1,1,1,1]
     state.channelModes = [null,1,1,1,1]
